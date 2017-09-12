@@ -15,10 +15,12 @@
     "test": "ember test"
   },
   "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
     "broccoli-asset-rev": "^2.4.5",
     "broccoli-clean-css": "~1.1.0",
     "ember-ajax": "^3.0.0",
     "ember-autoserve": "^0.0.4",
+    "ember-bootstrap": "^1.0.0-rc.2",
     "ember-cli": "2.13.2",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.0.0",
@@ -29,7 +31,6 @@
     "ember-cli-eslint": "^3.0.0",
     "ember-cli-facebook-js-sdk": "^1.0.8",
     "ember-cli-flash": "^1.4.2",
-    "ember-cli-foundation-6-sass": "^0.0.23",
     "ember-cli-google-analytics": "^1.5.0",
     "ember-cli-htmlbars": "^1.1.1",
     "ember-cli-htmlbars-inline-precompile": "^0.4.0",

@@ -5,6 +5,12 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     SRI: {
       enabled: false
+    },
+
+    'ember-bootstrap': {
+      bootstrapVersion: 3,
+      importBootstrapFont: true,
+      importBootstrapCSS: true
     }
   });
 
