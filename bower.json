@@ -2,5 +2,8 @@
   "name": "red-audiencias-publicas",
   "dependencies": {
     "tabletop": "^1.5.1"
+  },
+  "devDependencies": {
+    "ember": "2.12.1"
   }
 }
