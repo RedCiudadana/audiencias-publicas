@@ -32,6 +32,24 @@
         </div>
       </div>
 
+      {{#each model as |audiencia|}}
+          {{#if audiencia.thumbMedium}}
+            {{#link-to 'audiencia' audiencia.id class='audiencia_link'}}
+              <img class="video__thumbnail" src="{{audiencia.thumbMedium}}">
+            {{/link-to}}
+          {{else if audiencia.logo}}
+            {{#link-to 'audiencia' audiencia.id class='audiencia_link'}}
+              <img class="video__thumbnail" src="/img/ICONOS_TEXTO/{{audiencia.logo}}">
+            {{/link-to}}
+          {{/if}}
+
+          {{!-- <h2 class="video__title">
+            {{#link-to 'audiencia' audiencia.id class="title__link"}}
+              {{audiencia.nombre}}
+            {{/link-to}}
+          </h2> --}}
+      {{/each}}
+
       {{!-- <div class="row">
         <div class="col-md-12 text-center">
             <a href="#">

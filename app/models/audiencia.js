@@ -7,6 +7,7 @@ export default DS.Model.extend({
   youtubeId: DS.attr(),
   facebookVideoUrl: DS.attr(),
   thumbMedium: DS.attr(),
+  logo: DS.attr(),
   enableQuestionStream: DS.attr('number'),
   getEnableQuestionStream: Ember.computed.bool('enableQuestionStream'),
   slideshareUrl: DS.attr(),
