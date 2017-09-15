@@ -1,4 +1,171 @@
 <main class="room" data-tab-index="0">
+<section style="background-color:#4E3A82;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="col-md-3 text-center">
+          <img src="/img/ICONOS_TEXTO/PORTAL_06-35.png" alt="image" 
+                    style="margin-top:50px;
+                          margin-right:0px;
+                    width:150px;">
+        </div>
+        <div class="col-md-3 text-center">
+          <h1 style="margin-top:105px;
+                      margin-left:0px;
+                      color:white;">
+            <strong class="text-uppercase">Mineduc</strong>
+          </h1>
+        </div>
+        <div class="row">
+          <div class="col-md-12" style="margin-top:0px;
+          margin-bottom:50px;">
+            <h3>
+              <strong>
+              Siga y comparta las preguntas hechas por los diputados
+              durante las interpelaciones 
+              </strong>
+            </h3>
+          </div>
+        </div>
+    </div>
+     <div class="col-md-6">
+        <div style="margin-top:60px;">
+        <video width="100%" controls><source src="/img/Video/Tutorial.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+        </div>
+      </div>
+  </div>
+  </div>
+</section>
+ <section style="background-color:#29ABE2;">
+        <!-- Header -->
+        <div class="container"  >
+          <div class="row">
+            <div class="col-md-12">
+              <div class="col-md-6">
+                <h1 style="margin-top:50px;
+                margin-left:50px;
+                margin-bottom:50px;
+                color:white;">
+                  <strong class="text-uppercase">Interpelacion</strong>
+                </h1>
+              </div>
+              <div class="col-md-6 text-center" 
+              style="background-color:white;
+              height:140px;
+              ">
+              <div class="col-md-3 text-center">
+                <h4 style="margin-top:50px;
+                margin-left:0px;
+                margin-bottom:50px;
+                color:purple;">
+                  <strong >Descargar Presentación</strong>
+                </h4>
+              </div>
+              <div class="col-md-3 text-center">
+                <h4 style="margin-top:50px;
+                margin-left:0px;
+                margin-bottom:50px;
+                color:purple;">
+                  <strong >Dinos que piensas</strong>
+                </h4>
+              </div>
+              <div class="col-md-3 text-center">
+                <h4 style="margin-top:50px;
+                margin-left:0px;
+                margin-bottom:50px;
+                color:purple;">
+                  <strong >Ficha Técnica</strong>
+                </h4>
+              </div>
+              </div>
+              <!--/.nav-collapse  -->
+            </div>
+          </div>
+        </div>
+            <!--/.container-fluid -->
+  </section>
+<section 
+  style="background-color:#D0D2D3;
+  padding:40px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-6">
+          <div class="section-right__top">
+            <div class="video">
+              <div class="video__iframe-wrapper">
+                {{#if model.audiencia.youtubeId}}
+                  {{ember-youtube ytid=model.audiencia.youtubeId playerVars=(hash autoplay=0)}}
+                {{/if}}
+
+                {{#if model.audiencia.facebookVideoUrl}}
+                  <div class="fb-video" data-href="{{model.audiencia.facebookVideoUrl}}" data-width="500" data-show-text="false">
+                    <blockquote cite="{{model.audiencia.facebookVideoUrl}}" class="fb-xfbml-parse-ignore">
+                      <a href="{{model.audiencia.facebookVideoUrl}}"></a>
+                    </blockquote>
+                  </div>
+                {{/if}}
+              </div>
+
+              <div class="video__title text-center">
+                <h2 class="title__subheader">
+                  <span class="subheader__text">{{ model.audiencia.nombre }}</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center" style="background-color:#29ABE2;">
+            <h1 style="margin-top:50px;
+                      margin-left:0px;
+                      color:white;">
+            <strong class="text-uppercase">Mineduc</strong>
+            </h1>
+              <div class="section-right__bottom">
+                <div class="chat">
+                  {{#twitter-feed}}
+                    {{#if model.audiencia.twitterTimelineTag}}
+                      {{{model.audiencia.twitterTimelineTag}}}
+                    {{else}}
+                      <a class="twitter-timeline"
+                        href="https://twitter.com/hashtag/{{model.audiencia.twitterHashtag}}"
+                        data-widget-id="sup"
+                      >
+                        #{{model.audiencia.twitterHashtag}} Tweets
+                      </a>
+                    {{/if}}
+                  {{/twitter-feed}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img class="banner__logo" src="/img/PORTAL_06-01.png" style="width: 100%;">
+          <div class="row">
+            <div class="col-md-12">
+            SoundCloud Component goes here
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-center">
+                <div
+                  class="fb-comments"
+                  data-href="{{model.audiencia.facebookCommentsUrl}}"
+                  data-width="645"
+                  data-numposts="10"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <section class="section-left">
     <div class="questions-wrapper">
       <div class="questions">
@@ -59,7 +226,7 @@
     </div>
   </section>
 
-  <section class="section-right">
+  {{!-- <section class="section-right">
     <div class="section-right__top">
       <div class="video">
         <div class="video__iframe-wrapper">
@@ -100,5 +267,6 @@
         {{/twitter-feed}}
       </div>
     </div>
-  </section>
-</main>
+  </section> --}}
+
+ </main>
