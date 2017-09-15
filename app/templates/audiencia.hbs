@@ -21,7 +21,7 @@
           </div>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-sm-6 col-md-6">
           <iframe
             src={{model.audiencia.slideshareUrl}}
             width="500"
@@ -43,23 +43,23 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="col-md-6">
-            <h1 style="margin-top:50px; margin-left:50px; margin-bottom:50px; color:white;">
+          <div class="col-md-6 col-sm-6 text-center">
+            <h2 style="margin-top:50px; margin-bottom:50px; color:white;">
               <strong class="text-uppercase">Interpelacion</strong>
-            </h1>
+            </h2>
           </div>
           <div class="col-md-6 text-center" style="background-color:white; height:140px;">
-          <div class="col-md-3 text-center">
+          <div class="col-md-3 col-sm-3 text-center">
             <h4 style="margin-top:50px; margin-left:0px; margin-bottom:50px; color:purple;">
               <strong >Descargar Presentación</strong>
             </h4>
           </div>
-          <div class="col-md-3 text-center">
+          <div class="col-md-3 col-sm-3 text-center">
             <h4 style="margin-top:50px; margin-left:0px; margin-bottom:50px; color:purple;">
               <strong >Dinos que piensas</strong>
             </h4>
           </div>
-          <div class="col-md-3 text-center">
+          <div class="col-md-3 col-sm-3 text-center">
             <h4 style="margin-top:50px; margin-left:0px; margin-bottom:50px; color:purple;">
               <strong >Ficha Técnica</strong>
             </h4>
@@ -93,13 +93,13 @@
 
                 <div class="video__title text-center">
                   <h2 class="title__subheader">
-                    <span class="subheader__text">{{ model.audiencia.nombre }}</span>
+                    <h1 class="header__title">{{model.audiencia.nombre}}</h1>
                   </h2>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-12 text-center" style="background-color:#29ABE2;">
+            <div class="row" style="margin-bottom:1em;">
+              <div class="col-md-12 text-center" style="background-color:#29ABE2; padding-top:1em; padding-bottom:2em;">
               <h1 style="margin-top:50px; margin-left:0px; color:white;">
               <strong class="text-uppercase">Mineduc</strong>
               </h1>
@@ -135,9 +135,20 @@
                   <div
                     class="fb-comments"
                     data-href="{{model.audiencia.facebookCommentsUrl}}"
-                    data-width="645"
+                    data-width="auto"
                     data-numposts="10"
                   ></div>
+                </div>
+                <div class="row">
+                  {{facebook-share
+                  fb-layout='button_count'
+                  classNames='column small-2 small-offset-8 text-right'
+                  }}
+                  {{twitter-share
+                  count='horizontal'
+                  hashtags=model.audiencia.twitterHashtag
+                  classNames='column small-2 twitter-share-container text-left'
+                  }}
                 </div>
               </div>
             </div>
@@ -147,61 +158,4 @@
     </div>
   </section>
 
-  <section class="section-left">
-    <div class="questions-wrapper">
-      <div class="questions">
-        <div class="questions__header">
-
-          <div class="row">
-            {{facebook-share
-              fb-layout='button_count'
-              classNames='column small-2 small-offset-8 text-right'
-            }}
-            {{twitter-share
-              count='horizontal'
-              hashtags=model.audiencia.twitterHashtag
-              classNames='column small-2 twitter-share-container text-left'
-            }}
-          </div>
-
-          <h1 class="header__title">{{model.audiencia.nombre}}</h1>
-          <p class="header__text">
-            Sigue en vivo y comparte tus preguntas o comentarios.
-          </p>
-        </div>
-
-        <div class="questions__list text-center" id="questions">
-          <iframe
-            src={{model.audiencia.slideshareUrl}}
-            width="500"
-            height="335"
-            frameborder="0"
-            marginwidth="0"
-            marginheight="0"
-            scrolling="no"
-            style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;"
-            allowfullscreen
-          >
-          </iframe>
-        </div>
-
-        <div class="questions__list text-center" style="margin: 0em;">
-          {{#each model.documentos as |documento|}}
-            <a class="button {{documento.cssClasses}}" href="{{documento.url}}" target="_blank">
-              {{documento.titulo}}
-            </a>
-          {{/each}}
-        </div>
-
-        <div class="text-center">
-          <div
-            class="fb-comments"
-            data-href="{{model.audiencia.facebookCommentsUrl}}"
-            data-width="645"
-            data-numposts="10"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
