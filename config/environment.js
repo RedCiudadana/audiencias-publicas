@@ -17,6 +17,11 @@ module.exports = function(environment) {
       }
     },
 
+    ifa: {
+      enabled: true,
+      inline: false,
+    },
+
     // FB: {
     //   appId: '134794956606359',
     //   version: 'v2.9',

@@ -41,7 +41,10 @@
               {{/link-to}}
             {{else if audiencia.logo}}
               {{#link-to 'audiencia' audiencia.id class='audiencia_link'}}
-                <img src="img/ICONOS_TEXTO/{{audiencia.logo}}" alt="{{audiencia.nombre}}">
+                <img
+                  src={{asset-map (concat 'img/ICONOS_TEXTO/' audiencia.logo)}}
+                  alt={{audiencia.nombre}}
+                >
               {{/link-to}}
             {{/if}}
           </div>

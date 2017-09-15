@@ -11,6 +11,12 @@ module.exports = function(defaults) {
       bootstrapVersion: 3,
       importBootstrapFont: true,
       importBootstrapCSS: true
+    },
+
+    fingerprint: {
+      enabled: EmberApp.env() === 'production',
+      generateAssetMap: true,
+      fingerprintAssetMap: true
     }
   });
 
