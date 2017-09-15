@@ -43,28 +43,30 @@
 
   <section style="background-color: #29ABE2;">
     <div class="container">
-      <div class="row">
+      <div class="row text-center">
         <div class="col-md-12">
           <div class="col-md-6 col-sm-6 text-center">
             <h2 style="margin-top:50px; margin-bottom:50px; color:white;">
               <strong class="text-uppercase">Interpelacion</strong>
             </h2>
           </div>
-          <div class="col-md-6 text-center" style="background-color:white; height:140px;">
-          <div class="col-md-3 col-sm-3 text-center">
-            <h4 style="margin-top:50px; margin-left:0px; margin-bottom:50px; color:purple;">
-              <strong >Descargar Presentación</strong>
-            </h4>
-          </div>
-          <div class="col-md-3 col-sm-3 text-center">
-            <h4 style="margin-top:50px; margin-left:0px; margin-bottom:50px; color:purple;">
-              <strong >Dinos que piensas</strong>
-            </h4>
-          </div>
-          <div class="col-md-3 col-sm-3 text-center">
-            <h4 style="margin-top:50px; margin-left:0px; margin-bottom:50px; color:purple;">
-              <strong >Ficha Técnica</strong>
-            </h4>
+          <div class="col-md-6 text-center" style="background-color:white;">
+          <div class ="row">
+            <div class="col-md-4 col-sm-4 text-center">
+              <h4 id="button" style="margin-top:50px; margin-left:0px; margin-bottom:50px; color:purple;">
+                <strong >Descargar Presentación</strong>
+              </h4>
+            </div>
+            <div class="col-md-4 col-sm-4 text-center">
+              <h4 id="button" style="margin-top:50px; margin-left:0px; margin-bottom:50px; color:purple;">
+                <strong >Dinos que piensas</strong>
+              </h4>
+            </div>
+            <div class="col-md-4 col-sm-4 text-center">
+              <h4 id="button" style="margin-top:50px; margin-left:0px; margin-bottom:50px; color:purple;">
+                <strong >Ficha Técnica</strong>
+              </h4>
+            </div>
           </div>
           </div>
         </div>
@@ -85,7 +87,7 @@
                   {{/if}}
 
                   {{#if model.audiencia.facebookVideoUrl}}
-                    <div class="fb-video" data-href="{{model.audiencia.facebookVideoUrl}}" data-width="500" data-show-text="false">
+                    <div class="fb-video" data-href="{{model.audiencia.facebookVideoUrl}}" data-width="auto" data-show-text="false">
                       <blockquote cite="{{model.audiencia.facebookVideoUrl}}" class="fb-xfbml-parse-ignore">
                         <a href="{{model.audiencia.facebookVideoUrl}}"></a>
                       </blockquote>
@@ -100,7 +102,7 @@
                 </div>
               </div>
             </div>
-            <div class="row" style="margin-bottom:1em;">
+            <div class="row" style="margin-bottom:1em; margin:0px">
               <div class="col-md-12 text-center" style="background-color:#29ABE2; padding-top:1em; padding-bottom:2em;">
               <h1 style="margin-top:50px; margin-left:0px; color:white;">
               <strong class="text-uppercase">Mineduc</strong>
