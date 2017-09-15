@@ -22,7 +22,7 @@ module.exports = function(deployTarget) {
   }
 
   ENV.git = {
-    repo: 'https://github.com/RedCiudadana/presupuesto-abierto.git',
+    repo: 'https://github.com/Kosho969/presupuesto-abierto.git',
     branch: 'gh-pages',
     worktreePath: '/tmp/red-presupuesto-abierto'
   };
