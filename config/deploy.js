@@ -24,7 +24,6 @@ module.exports = function(deployTarget) {
   ENV.git = {
     repo: 'https://github.com/Kosho969/presupuesto-abierto.git',
     branch: 'gh-pages',
-    worktreePath: '/tmp/red-presupuesto-abierto'
   };
 
   // Note: if you need to build some configuration asynchronously, you can return
